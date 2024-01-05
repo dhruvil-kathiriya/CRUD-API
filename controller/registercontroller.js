@@ -51,7 +51,6 @@ module.exports.getdata = async (req, res) => {
     }
 }
 
-
 module.exports.deleterec = async (req, res) => {
     try {
         let deletes = await register.findByIdAndDelete(req.params.id);
@@ -66,7 +65,6 @@ module.exports.deleterec = async (req, res) => {
         console.log('Somthing Wrong');
         return res.status(400).json({ msg: 'Somthing Wrong', status: 0 });
     }
-
 }
 
 module.exports.updatedata = async (req, res) => {
